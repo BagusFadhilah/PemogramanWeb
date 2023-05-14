@@ -11,6 +11,7 @@
     <button type="submit" class="btn btn-primary">Bayar</button>
 </form>
 
+
 @if (session('error'))
     <div class="alert alert-danger">
         {{ session('error') }}

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PembayaranController;
+use App\Models\Pembayaran;
 
 
 /*
