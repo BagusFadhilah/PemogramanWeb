@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PembayaranController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -35,4 +37,13 @@ Route::get('/contact', function () {
 });
 Route::get('/about', function () {
     return view('about');
+});
+
+Route::get('/pembayaran', function () {
+    return view('pembayaran');
+});
+
+Route::group(['middleware' => ['web']], function () {
+    Route::get('/pembayaran/create', [PembayaranController::class, 'create']);
+    Route::post('/pembayaran', [PembayaranController::class, 'store']);
 });
